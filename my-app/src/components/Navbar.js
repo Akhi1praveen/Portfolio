@@ -6,12 +6,23 @@ import React, { useState } from 'react'
 const Navbar = () => {
     const [click, setclick] = useState(false);
     const handleClick = () => setclick(!click);
+
+    const[color,setcolor]=useState(false);
+    const changeColor = () =>{
+      if(window.scrollY >= 1){
+        setcolor(true);
+      }else{
+        setcolor(false);
+      }
+    }
+
+    window.addEventListener("scroll",changeColor);
   return (
-    <div className="header">
+    <div className={color ? "header header-bg" :"header"}>
       <Link to="/">
       <h1>Portfolio</h1>
       </Link>
-      <ul className={click ? ("nav-menu active"):("nav-menu")}>
+      <ul className={click ? "nav-menu active":"nav-menu"}>
         <li>
             <Link to={"/"}>Home</Link>
         </li>
