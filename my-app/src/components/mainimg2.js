@@ -1,0 +1,15 @@
+import "./mainimg2.css"
+import React from 'react'
+
+const mainimg2 = () => {
+  return (
+    <div className="main-img">
+        <div className="heading">
+            <h1>This is headimg</h1>
+            <p>this is a text</p>
+        </div>
+    </div>
+  )
+}
+
+export default mainimg2
