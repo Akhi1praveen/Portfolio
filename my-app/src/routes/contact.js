@@ -7,7 +7,7 @@ const contact = () => {
   return (
     <div>
       <Navbar/>
-      <Mainimg2/>
+      <Mainimg2 heading="Contact" text="Lets chat here."/>
      <Footer/>
     </div>
   )
